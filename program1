@@ -1,0 +1,12 @@
+begin:
+while 1==1 do begin
+print "ход" ;
+buy 2, raw_price() ;
+sell production(my_id()), production_price() ;
+toprod = 2;
+if raw(my_id()) < toprod then
+toprod = raw(my_id()) ;
+prod toprod ;
+endturn ;
+end;
+end.

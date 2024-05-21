@@ -1,0 +1,37 @@
+Game bot language analyser.
+
+execution: main program_file server_ip server_port
+
+program_file - text file in any format
+
+program modules:
+	connection.h
+		Contains class for connecting to server. Object of this class connects
+		by constructor. Also contains functions for server requests. Headers only;
+		realisation in connection.cpp.
+	
+	exc.h
+		Contains classes for exceptions. All based on std exceptions. Classes
+		for lexical, syntax and runtime errors were written.
+	
+	ident_tables.h
+		Contains global tables of identifiers and class for it's beginning
+		initialisation. Headers only; realisation in ident_tables.cpp.
+	
+	lex.h
+		File for class - lexical analyser. Also contains some additional
+		definitions: class for lexeme and list of lexeme types. Headers only;
+		realisation in lex.cpp.
+	
+	main.cpp
+		Starting file. Creates lexical and syntax analysers object, object - 
+		connection with server. Execute analysers, then runs items of resulting
+		POLIZ one by one;
+	
+	poliz_types.h
+		Full hierarchy of POLIZ items. Some classes are abstract. run() functions
+		for executing program also here. Headers only; realisation in
+		poliz_types.cpp.
+	
+	syn.h
+		File with class of syntax analyser. Headers only; realisation in syn.cpp.
